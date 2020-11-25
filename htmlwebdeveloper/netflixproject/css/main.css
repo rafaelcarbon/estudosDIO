@@ -13,31 +13,66 @@
 
 body{
     background: var(--preto);
-    font-family: "Times New Roman", Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     color:#fff;
 }
 
 .container{
-    padding: 20px;
+    padding: 30px;
+
 }
+
 
 header .container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-between;
+    width: 50%;
+    
+}
+header .search{
+    justify-content: right;
+    text-align: right;
+    width: 50%;
+    padding: 30px;
+}
+.busca{
+    margin:0;
+    padding: 5px;
+    border: none;
+    background-color:var(--preto);
+    color: #fff;
+    width: 100px;
+    transition: .5s ease all;
+
+}
+.busca:focus, .busca:active{
+    width: 200px;
+}
+
+.search i{
+    margin-left: 5px;
 }
 .logo{
     width: 7rem;
-    padding: 10px;
+    padding: 10px 0;
 }
-
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 header nav a{
     text-decoration: none;
     color: var(--cinza);
     transition: .5s ease all;
-    padding: 0 10px;
+    padding: 0 15px;
+    font-size: 16px;
+    
 
+}
+header nav{
+    margin-left: 10px;
 }
 
 header nav a:hover{
@@ -55,6 +90,9 @@ flex-direction: column;
 justify-content: center;
 align-items: flex-start;
 }
+.filme-principal .container p{
+    line-height: 150%;
+}
 
 .filme-principal .container{
     width: 60%;
@@ -71,19 +109,43 @@ align-items: flex-start;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: normal;
     margin-top: 15%;
-}
 
+}
+.info{
+    color: var(--vermelho);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .5s ease all;
+
+
+}
+.info:hover{
+    color: rgba(255, 255, 255, 0.8);
+}
+.descricao i{
+    margin: 0 5px;
+}
 .botao{
-    background-color: rgba(255,255,255,.1);
     color: var(--cinza);
     border: none;
     text-transform: uppercase;
-    padding: 10px 15px;
+    padding: 5px 15px;
     margin: 0 10px 5px 0;
     font-size: 12px;
     cursor: pointer;
     transition: .3s ease all;
+    color: #fff;
 }
+.botao-red{
+    background-color:var(--vermelho);
+    font-weight: bold;
+}
+
+.botao-trailer{
+    border: 1px solid #fff;
+    background-color: rgba(0,0,0,.1);
+}
+
 .botao i{
     margin: 10px;
 }

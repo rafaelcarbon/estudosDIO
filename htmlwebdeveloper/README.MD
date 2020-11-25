@@ -1,2 +1,2 @@
-# Estudos e Projetos dos cursos da Digital Innovation One
+# Estudos e Projetos do curso de HTML Web Developer
 

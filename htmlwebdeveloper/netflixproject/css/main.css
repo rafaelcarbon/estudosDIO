@@ -23,19 +23,18 @@ header .container{
     flex-direction: row;
     align-items: center;
     justify-content:space-between;
+    padding: 0 30px;
 }
 
 header .logo{
-    color: var(--vermelho);
-    font-family: "Arial Black", Times;
-    font-size: 40px;
-    margin-left: 5px;
+    width: 7rem;
+    padding: 10px;
 }
 
 header nav a{
     text-decoration: none;
     color: var(--cinza);
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 header nav a:hover{
@@ -53,15 +52,34 @@ justify-content: center;
 align-items: flex-start;
 }
 
-.filme-principal .descricao{
+.descricao{
+    margin-top: 10px;
     margin-bottom: 40px;
 }
 
 .tituloprincipal{
     text-transform: uppercase;
     font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+    margin-top: 15%;
 }
-.filme-principal button{
-    border-radius: 0;
-    text-transform:uppercase;
+
+.botao{
+    background-color: rgba(0,0,0,.7);
+    color: var(--cinza);
+    border: none;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.botao i{
+    margin-right: 10px;
+}
+.botao:hover{
+    background-color: #fff;
+    color: #000000;
 }

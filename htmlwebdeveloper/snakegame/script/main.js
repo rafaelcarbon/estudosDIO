@@ -4,16 +4,19 @@ let box = 32;
 let snake = [];
 let direction = "right";
 let game = setInterval(start, 100);
+let food = {
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box
+}
 
 document.addEventListener("keydown", update);
 
 snake[0] = {
 
-    x: 3 * box,
-    y: 3 * box
+    x: 7 * box,
+    y: 7 * box
 
 }
-
 
 function background(){
 
@@ -29,6 +32,11 @@ function makesnake(){
         context.fillRect(snake[i].x, snake[i].y, box, box);
 
     }
+}
+
+function newfood(){
+    context.fillStyle = "red";
+    context.fillRect(food.x, food.y, box, box)
 }
 
 function update(event){
@@ -47,6 +55,7 @@ function start(){
 
     background();
     makesnake();
+    newfood();
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;

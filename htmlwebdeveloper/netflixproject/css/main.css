@@ -18,23 +18,54 @@ body{
 }
 
 .container{
-    padding: 30px;
+    padding: 0 30px;
 
 }
-
 
 header .container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 50%;
+    width: 55%;
     
 }
-header .search{
+
+/* Navegação */
+
+.logo{
+    width: 6rem;
+    margin-right: 10px;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header nav a{
+    text-decoration: none;
+    color: var(--cinza);
+    transition: .5s ease all;
+    padding: 0 10px;
+    font-size: 14px;
+    
+
+}
+
+header nav{
+    margin-left: 5px;
+}
+
+header nav a:hover{
+    color: var(--cinzahover);
+}
+
+/* Busca e Conta*/
+
+.search{
     justify-content: right;
     text-align: right;
-    width: 50%;
-    padding: 30px;
+    width: 45%;
+    padding: 10px 30px 10px 0;
 }
 .busca{
     margin:0;
@@ -47,43 +78,30 @@ header .search{
 
 }
 .busca:focus, .busca:active{
-    width: 200px;
+    width: 150px;
 }
 
 .search i{
-    margin-left: 5px;
+    margin: 0 10px 0 0;
 }
-.logo{
-    width: 7rem;
-    padding: 10px 0;
-}
-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-header nav a{
+
+a{
     text-decoration: none;
-    color: var(--cinza);
+    font-weight: bold;
+    color: #fff;
     transition: .5s ease all;
-    padding: 0 15px;
-    font-size: 16px;
-    
 
 }
-header nav{
-    margin-left: 10px;
-}
 
-header nav a:hover{
-    color: var(--cinzahover);
+.conta:hover{
+    color: var(--vermelho);
 }
 
 /* FIlme Principal*/
 .filme-principal{
-font-size: 18px;
+font-size: 14px;
 background: linear-gradient(to left, rgba(0, 0, 0, .2), rgba(0, 0, 0, 1)100%) ,url("../img/gambitoinicial.jpg");
-height: 400px;
+height: 500px;
 background-size: cover;
 display: flex;
 flex-direction: column;
@@ -95,12 +113,17 @@ align-items: flex-start;
 }
 
 .filme-principal .container{
-    width: 60%;
+    width: 45%;
 }
 
 .descricao{
-    margin-top: 10px;
-    margin-bottom: 40px;
+    margin: 20px 0;
+}
+.info{
+    display: block;
+}
+.info i{
+    margin: 0 5px 0 0;
 }
 
 .tituloprincipal{
@@ -108,22 +131,55 @@ align-items: flex-start;
     font-size: 40px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: normal;
-    margin-top: 15%;
+    margin: 20px 0;
 
 }
+.subtituloprincipal{
+    font-size: 20px;
+}
+
+.detalhes {
+    list-style: none;
+    margin: 15px 0;
+}
+.classificacao{
+    border: 1px solid var(--cinza);
+    padding: 2px 5px;
+
+}
+.drama{
+    font-weight: normal;
+    color: var(--cinza);
+    transition: .5s ease all;
+}
+.drama:hover{
+    color: #fff;
+
+}
+.detalhes li{
+    display: inline;
+    margin: 0 10px 0 0;
+    color: var(--cinza);
+}
+
 .info{
     color: var(--vermelho);
     text-transform: uppercase;
     text-decoration: none;
     transition: .5s ease all;
-
-
 }
+
 .info:hover{
     color: rgba(255, 255, 255, 0.8);
 }
-.descricao i{
-    margin: 0 5px;
+
+.direitos{
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+.direitos-nomes{
+    color: var(--cinza);
+
 }
 .botao{
     color: var(--cinza);
@@ -145,8 +201,6 @@ align-items: flex-start;
     border: 1px solid #fff;
     background-color: rgba(0,0,0,.1);
     font-weight: bold;
-
- 
 }
 .botao-trailer a{
     text-decoration: none;
@@ -216,19 +270,30 @@ align-items: flex-start;
 .carrossel-filmes{
     margin-top: 10px;
 }
-
-@media screen and (max-width:850px){
+/* Responsivo Tablet*/
+@media screen and (max-width:900px){
     header .container{
     display: flex;
     flex-direction: column;
-    margin: 15px;
-}
-    .logo{
-        width: 10rem;
-        margin-bottom: 10px;
+    margin: 10px 0;
+    padding: 10px 0;
+    width: 100%;
     }
 
-
+    .logo{
+        width: 10rem;
+        margin:10px 0 15px 0;
+    }
+ 
+    header nav a{
+        text-decoration: none;
+        color: var(--cinza);
+        transition: .5s ease all;
+        padding: 0 10px;
+        font-size: 14px;
+        
+    
+    }
     .botao{
         width: 100%;
         margin: 0 0 10px 0;
@@ -241,9 +306,22 @@ align-items: flex-start;
     .filme-principal .container{
         width: 100%;
         text-align: center;
+        font-size: 14px;
     
     }
     .tituloprincipal{
-    font-size: 30px;
     }
+    .search{
+        display:none;
+        position: relative;
+        
+    }
+    .subtituloprincipal{
+        display: none;
+    }
+    .detalhes{
+        font-size: 12px;
+    }
+
 }
+

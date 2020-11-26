@@ -4,13 +4,22 @@ $('.owl-carousel').owlCarousel({
     nav:true,
     responsive:{
         0:{
-            items:1
+            items:2
         },
         600:{
             items:3
         },
         1000:{
-            items:5
+            items:6
         }
     }
 })
+
+function openTrailer(){
+    var trailer =  document.querySelector(".trailer");
+    var video =  document.querySelector("video");
+    video.pause();
+    video.currentTime = 0;
+
+    trailer.classList.toggle("active");
+}

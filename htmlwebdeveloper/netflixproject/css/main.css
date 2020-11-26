@@ -144,15 +144,69 @@ align-items: flex-start;
 .botao-trailer{
     border: 1px solid #fff;
     background-color: rgba(0,0,0,.1);
+    font-weight: bold;
+
+ 
+}
+.botao-trailer a{
+    text-decoration: none;
+    color: #fff;
+}
+.botao:hover{
+    background-color: #fff;
+    color: var(--vermelho);
+    transition: .5s ease all;
+
+}
+.botao:hover a{
+    color: var(--vermelho);
+
+
 }
 
 .botao i{
     margin: 10px;
 }
-.botao:hover{
-    background-color: #fff;
-    color: #000000;
+
+
+/* Trailer */
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s ease all;
+
+    
 }
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer video{
+    position: relative;
+    height: 80%;
+    max-width: 90%;
+    outline: none;
+}
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    }
+
+/* Carousel */
 .box-filme{
     height: 100%;
     width: 100%;

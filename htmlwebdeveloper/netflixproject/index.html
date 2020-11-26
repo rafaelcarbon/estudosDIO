@@ -6,6 +6,8 @@
     <title>Netflix Clone</title>
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     
+    
+
     <!-- Responsividade-->
     <link rel="stylesheet" type="text/css" href="./css/responsive.css">
 
@@ -29,10 +31,10 @@
         </nav>
 
     </div>
-    <div class="search"><i class="fas fa-search"></i>
+    <div class="search"><i class="fas fa-search fa-lg"></i>
         <input class="busca" type="text" placeholder="Pesquise...">
-        <i class="fas fa-bell"></i>
-        <i class="fas fa-user-circle">  RafaelCarbon</i>
+        <i class="fas fa-bell fa-lg"></i>
+        <i class="fas fa-user-circle fa-lg">  RafaelCarbon</i>
 
     </div>
     </header>
@@ -46,15 +48,21 @@
                 </p>
             
                 <div class="botoes">
-                    <button role="button" class="botao botao-red"><i class="fas fa-play"></i>Assistir agora</button>
-                    <button role="button" class="botao botao-trailer"><i class="fas fa-play"></i>Ver Trailer</button>
-            
-            
+                    <button role="button" class="botao botao-red"><i class="fas fa-play fa-lg"></i>Assistir agora</button>
+                    <button role="button" class="botao botao-trailer"><i class="fas fa-film fa-lg"></i><a href="#" onclick="openTrailer()">Ver Trailer</a></button>
                 </div>
             </div>
            
         </div>
     </main>
+    <div class="trailer">
+        <video controls>
+            <source src="./video/gambitotrailer.mp4" type="video/mp4">
+        </video>
+        <i class="fas fa-times-circle fa-2x close" onclick="openTrailer()"></i>
+
+    </div>
+
     <div class="carrossel-filmes">
         <div class="owl-carousel owl-theme">
             <div class="item">

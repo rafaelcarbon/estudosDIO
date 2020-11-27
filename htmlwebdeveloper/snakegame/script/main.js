@@ -9,6 +9,7 @@ let food = {
     y: Math.floor(Math.random() * 15 + 1) * box
 }
 
+background();
 document.addEventListener("keydown", update);
 
 snake[0] = {
@@ -17,19 +18,11 @@ snake[0] = {
     y: 7 * box
 
 }
-
-function background(){
-
-    context.fillStyle = "lightgray";
-    context.fillRect(0, 0, 16 * box, 16 * box);
-
-}
-
 function makesnake(){
 
     for(i=0; i < snake.length; i++){
 
-        context.fillStyle = "black";
+        context.fillStyle = "#E0E0E0";
         context.fillRect(snake[i].x, snake[i].y, box, box);
 
     }
@@ -37,10 +30,18 @@ function makesnake(){
 
 function newfood(){
 
-    context.fillStyle = "red";
+    context.fillStyle = "#606060";
     context.fillRect(food.x, food.y, box, box)
 
 }
+function background(){
+
+    context.fillStyle = "rgba(50, 50, 50, 0.8)";
+    context.fillRect(0, 0, 16 * box, 16 * box);
+
+}
+
+
 
 function update(event){
 
@@ -52,21 +53,28 @@ function update(event){
 
 function start(){
 
-    if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
-    if(snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
-    if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
-    if(snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
+    // if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
+    // if(snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
+    // if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
+    // if(snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
+
+    if((snake[0].x > 15 * box && direction == "right") || (snake[0].x < 0 && direction == "left") || (snake[0].y > 15 * box && direction == "down") || (snake[0].y < 0 && direction == "up")) {
+        clearInterval(game);  
+        alert("Game Over");
+
+    }
+
 
     for(i = 1; i < snake.length; i++){
         if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
-        clearInterval(game);
-        alert("Game Over!");
+        clearInterval(game);  
+        alert("Game Over");  
     }
     }
-
     background();
-    makesnake();
     newfood();
+    makesnake();
+    
 
     let snakeX = snake[0].x;
     let snakeY = snake[0].y;
